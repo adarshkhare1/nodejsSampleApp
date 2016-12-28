@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var headerMaunItems = { 'Home': '/home', 'Contact': '/contact', 'About': '/about' };
+  res.render('index', { title: 'Agile Dashboard' 
+                    , headerMaunItems: headerMaunItems});
 });
 
 module.exports = router;
