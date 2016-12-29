@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+    
+        h1 #{title}
+        ul
+            for val, key in headerMenuItems
+                li
+                    if(key.toUpperCase() === activePage.toUpperCase())
+                        a(href=val, class="active") #{key}
+                    else
+                        a(href=val) #{key}
+        hr
+    block content

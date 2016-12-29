@@ -4,8 +4,8 @@ var headerMenuItems = require('../public/javascripts/topNavigation').headerMenuI
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  var routeName = "Users";
-  res.render('index', { title: 'Users' 
+  var routeName = "About";
+  res.render('index', { title: 'About' 
                     , headerMenuItems: headerMenuItems
                     , activePage:routeName});
 });
