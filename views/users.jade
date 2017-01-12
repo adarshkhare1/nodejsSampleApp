@@ -1,0 +1,13 @@
+extends globalHeader
+<link rel=”stylesheet” href=”bower_components/chartist/libdist/chartist.min.css”>
+script(src="../bower_components/chartist/dist/chartist.min.js")
+block content
+  h1 My Chart Goes Here
+   div(class="ct-chart")
+        script.
+            new Chartist.Bar('.ct-chart', {
+                labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+                series: [20, 60, 120, 200, 180, 20, 10]
+            }, {
+                distributeSeries: true
+            });
